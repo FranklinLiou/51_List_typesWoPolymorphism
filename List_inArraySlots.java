@@ -104,23 +104,21 @@ public class List_inArraySlots {
                */
 
           int[] typeExpansion = new int[filledElements * 2];
-          for( int elemIndex = 0; elemIndex < filledElements; elemIndex++)
-              typeExpansion[ elemIndex] = typeOfElements[ elemIndex];
-          typeOfElements = typeExpansion;
-
           int[] intExpansion = new int[filledElements * 2];
-          for( int elemIndex = 0; elemIndex < filledElements; elemIndex++)
-              intExpansion[ elemIndex] = intElements[ elemIndex];
-          intElements = intExpansion;
-
           double[] doubleExpansion = new double[filledElements * 2];
-          for( int elemIndex = 0; elemIndex < filledElements; elemIndex++)
-              doubleExpansion[ elemIndex] = doubleElements[ elemIndex];
-          doubleElements = doubleExpansion;
-
           String[] stringExpansion = new String[filledElements * 2];
-          for( int elemIndex = 0; elemIndex < filledElements; elemIndex++)
+
+          for( int elemIndex = 0; elemIndex < filledElements; elemIndex++) {
+              typeExpansion[ elemIndex] = typeOfElements[ elemIndex];
+              intExpansion[ elemIndex] = intElements[ elemIndex];
+              doubleExpansion[ elemIndex] = doubleElements[ elemIndex];
               stringExpansion[ elemIndex] = stringElements[ elemIndex];
+              
+          }
+
+          typeOfElements = typeExpansion;
+          intElements = intExpansion;
+          doubleElements = doubleExpansion;
           stringElements = stringExpansion;
       }
 
