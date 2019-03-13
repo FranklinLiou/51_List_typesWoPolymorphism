@@ -73,16 +73,14 @@ public class List_inArraySlots {
                         , String stringValue
                         ) {
           if( filledElements == typeOfElements.length) expand();
+          typeOfElements[filledElements] = type;
           if (type == 0) {
-              typeOfElements[filledElements] = type;
               intElements[filledElements] = intValue;
           }
           if (type == 1) {
-              typeOfElements[filledElements] = type;
               doubleElements[filledElements] = doubleValue;
           }
           if (type == 2) {
-              typeOfElements[filledElements] = type;
               stringElements[filledElements] = stringValue;
           }
           filledElements++;
